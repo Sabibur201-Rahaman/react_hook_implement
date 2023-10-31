@@ -3,15 +3,14 @@ import { useRef, useState } from 'react'
 
 function App() {
   // const [count, setCount] = useState(0)
-let myImg=useRef()
+let myHeadline=useRef()
 const change=()=>{
-  myImg.current.src='https://placehold.co/600x400?text=hello+world'
-myImg.current.setAttribute('height','150px')
-myImg.current.setAttribute('width','400px')
+  myHeadline.current.classList.remove('text-success')
+  myHeadline.current.classList.add('text-primary')
 }
   return (
     <>
-    <img ref={myImg}src='https://placehold.co/600x400'/>
+    <h1 className='text-success' ref={myHeadline}>hello this is ostad platform</h1>
       <button onClick={change}>click</button>
     </>
   )

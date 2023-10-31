@@ -3,14 +3,22 @@ import { useRef, useState } from 'react'
 
 function App() {
   // const [count, setCount] = useState(0)
-let number=useRef(0)
-const change=()=>{
-  number.current++;
-  console.log(number.current)
+let apiData=useRef(null)
+let myPtag=useRef()
+
+let fetchData=async()=>{
+const response=await fetch("https://dummyjson.com/products")
+console.log(response)
+ apiData.current=await response.json()
+}
+let showData=()=>{
+myPtag.current.innerText=JSON.stringify(apiData.current)
 }
   return (
     <>
-      <button onClick={change}>click</button>
+    <p ref={myPtag}></p>
+      <button onClick={fetchData}>FetchData</button>
+      <button onClick={showData}>ShowData</button>
     </>
   )
 }

@@ -3,13 +3,15 @@ import { useRef, useState } from 'react'
 
 function App() {
   // const [count, setCount] = useState(0)
-let headline=useRef()
+let myImg=useRef()
 const change=()=>{
-  headline.innerHTML="<ul><li>Hero<li>zero</li></ul>"
+  myImg.current.src='https://placehold.co/600x400?text=hello+world'
+myImg.current.setAttribute('height','150px')
+myImg.current.setAttribute('width','400px')
 }
   return (
     <>
-      <h1 ref={(h1)=>headline=h1}></h1>
+    <img ref={myImg}src='https://placehold.co/600x400'/>
       <button onClick={change}>click</button>
     </>
   )

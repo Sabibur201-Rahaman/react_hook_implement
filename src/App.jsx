@@ -1,14 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
+
 function App() {
+  let[data,setData]=useState()
   useEffect(()=>{
-console.log('heloo')
-  },[4])
+fetch('https://dummyjson.com/products/1')
+.then(res=>res.json())
+.then(json=>setData(json))
+  },[])
   return (
     <div>
-      <h1>this is react effect</h1>
+      {JSON.stringify(data)}
     </div>
   )
 }
-
 export default App

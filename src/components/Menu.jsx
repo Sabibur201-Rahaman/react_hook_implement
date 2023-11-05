@@ -6,8 +6,8 @@ function Menu() {
     <div>
       <ul>
         <li><NavLink className={({isActive})=>isActive?'activeItem':'pendingItem'} to='/'>Home</NavLink></li>
-        <li><NavLink className={({isActive})=>isActive?'activeItem':'pendingItem'}to='/product'>Product</NavLink></li>
-        <li><NavLink  className ={({isActive})=>isActive?'activeItem':'pendingItem'}to='/profile'>Profile</NavLink></li>
+        <li><NavLink className={({isActive})=>isActive?'activeItem':'pendingItem'}to='/product/20/shampo'>Product</NavLink></li>
+        <li><NavLink  className ={({isActive})=>isActive?'activeItem':'pendingItem'}to='/profile/Sabibur/Rahaman'>Profile</NavLink></li>
       </ul>
     </div>
   );

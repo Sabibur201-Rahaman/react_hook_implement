@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="" element={<HomePage/>}/>
-        <Route path="/product" element={<Product/>}/>
-        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/product/:id/:name" element={<Product/>}/>
+        <Route path="/profile/:facebookId/:whatsAppId" element={<Profile/>}/>
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
       </BrowserRouter>
